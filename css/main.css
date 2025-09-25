@@ -1,0 +1,428 @@
+:root {
+  --background-color: #EFF1F4;
+  --white: #fff;
+  --black: #000;
+  --accent-color: #870037;
+
+  --regular: 400;
+  --medium: 500;
+  --semibold: 600;
+  --bold: 700;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--background-color);
+  font-family: 'Inter', Arial, sans-serif;
+  color: var(--black);
+  font-weight: 400;
+  font-size: 18px;
+}
+h1 {
+  font-size: 48px;
+  font-weight: var(--bold);
+}
+h2 {
+  font-size: 40px;
+  font-weight: var(--bold);
+}
+h3 {
+  font-size: 24px;
+  font-weight: var(--semibold);
+}
+p + p {
+  margin-top: 12px;
+}
+.section-content {
+  margin-top: 40px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.tag {
+  padding: 12px 24px;
+  border-radius: 12px;
+  background-color: var(--accent-color);
+  color: var(--white);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: max-content;
+  transition: transform 0.3s ease;  
+}
+.tag-staff {
+  padding: 6px 12px;
+  border-radius: 12px;
+  background-color: var(--accent-color);
+  color: var(--white);
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 12px; 
+  width: 100%;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+.tag:hover, .tag-staff:hover {
+   transform: scale(0.95);
+}
+
+/* COMPONENT: VIDEO */
+.video-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;       /* автоматически держит пропорции */
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 500px;
+}
+.video-embed > iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* COMPONENT: FIRST SCREEN */
+.first-screen {
+  background-color: var(--accent-color);
+}
+.first-screen__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 0;
+}
+.first-screen__left {
+  max-width: 500px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.first-screen__left h1 {
+  max-width: 387px;
+}
+.first-screen__left p {
+  font-size: 24px;
+  font-weight: var(--medium);
+}
+.first-screen__right img {
+  border-radius: 12px;
+}
+
+/* COMPONENT: CONGRATULATION */
+.block-quote {
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 40px;
+}
+.block-quote__top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.block-quote__top img {
+  border-radius: 100px;
+}
+.block-quote__top--right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.block-quote__top--right span {
+  font-size: 24px;
+  font-weight: var(--semibold);
+}
+
+/* COMPONENT: SCHEDULE */
+.schedule p {
+  margin: 20px 0;
+}
+.schedule__shifts {
+  display: flex;
+  gap: 20px;
+}
+.shift-btn.active {
+  opacity: 100%;
+}
+.shift-btn {
+  padding: 12px 24px;
+  border-radius: 12px;
+  background-color: var(--accent-color);
+  color: var(--white);
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  opacity: 50%;
+}
+.schedule-cards {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.schedule-card__item {
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 590px;
+  width: 100%;
+}
+.schedule-card__item h3 {
+  margin-bottom: 20px;
+}
+.first-shift {
+  display: flex;
+}
+
+/* COMPONENT: SOCIAL MEDIA */
+.social-media {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.social-media span {
+  font-size: 24px;
+  font-weight: var(--semibold);
+}
+.sm-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* COMPONENT: TOUR */
+
+.tour-locations {
+  display: flex;
+  gap: 20px;
+}
+
+.tour-locations__item {
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* COMPONENT: STAFF */
+.familiarity h3 {
+  margin-top: 40px;
+}
+
+.staff {
+  padding: 40px 0 20px 0;
+  overflow-x: auto;
+  display: flex;
+  gap: 20px;
+}
+
+.staff-item {
+  padding: 20px;
+  background-color: var(--white);
+  min-width: 300px;
+  border-radius: 12px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+.staff-item img {
+  border-radius: 100px;
+  max-width: 150px;
+  max-height: 150px;
+}
+.staff-item h4 {
+  font-weight: var(--bold);
+}
+.staff-item span {
+  color: var(--accent-color);
+  font-weight: var(--medium);
+}
+.staff-item__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.staff-item__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+/* COMPONENT: VOLUNTEER */
+
+.volunteer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.volunteer-cards {
+  display: flex;
+  gap: 20px;
+}
+
+.volunteer-card__item {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.volunteer-card__item span {
+  font-size: 24px;
+  font-weight: var(--semibold);
+}
+
+
+/* COMPONENT: FAQ */
+.faq-row {
+  display: flex;
+  gap: 32px;
+  margin-top: 20px;
+}
+.faq-col {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 20px;
+}
+.faq-item.active-state .arrow {
+  transform: rotate(180deg);
+}
+.arrow {
+  flex-shrink: 0;
+  align-self: flex-start;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.faq-item {
+  background: var(--white);
+  border-radius: 18px;
+  box-shadow: 0 2px 8px 0 rgba(30, 41, 59, 0.07);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 20px;
+  color: var(--black);
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+button, .faq-question {
+  -webkit-tap-highlight-color: transparent;
+  font-size: 20px;
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  font-size: 16px;
+  color: var(--black);
+  background: var(--white);
+  transition: max-height 1s, padding 0.3s;
+  line-height: 1.7;
+}
+.faq-answer p {
+  font-size: 16px;
+}
+.faq-answer a {
+  color: var(--red);
+}
+.faq-item.active-state .faq-answer {
+  padding: 0 20px 20px 20px;
+  max-height: max-content;
+}
+
+/* MEDIA */
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 15px;
+  }
+  .schedule-card__item {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .first-screen__row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .first-screen__left p {
+    font-size: 18px;
+  }
+
+  /* COMPONENT: BLOCK QUITE */
+  .block-quote__top {
+    flex-direction: column;
+    align-items: flex-start
+  }
+
+  /* COMPONENT: SCHEDULE */
+  .schedule__shifts {
+    flex-direction: column;
+  }
+  .tour-locations {
+    flex-direction: column;
+  }
+
+  /* COMPONENT: SOCIAL MEDIA */
+  .sm-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* COMPONENT: VOLUNTEER */
+  .volunteer-cards {
+    flex-direction: column;
+  }
+}
