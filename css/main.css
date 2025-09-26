@@ -182,6 +182,8 @@ p + p {
 .first-shift {
   display: flex;
 }
+.schedule .shift-btn.active { outline: 2px solid var(--white); }
+.schedule-cards[hidden] { display: none !important; }
 
 /* COMPONENT: SOCIAL MEDIA */
 .social-media {
