@@ -91,12 +91,12 @@
                     <p>Расписание примерное. Сверяйтесь с официальными каналами для точных времени и локаций</p>
 
                     <div class="schedule__shifts">
-                        <button class="shift-btn active"><svg aria-hidden="true" width="24" height="24"><use href="#icon-shift" /></svg>1 смена</button>
-                        <button class="shift-btn"><svg aria-hidden="true" width="24" height="24"><use href="#icon-shift" /></svg>2 смена</button>
-                        <button class="shift-btn"><svg aria-hidden="true" width="24" height="24"><use href="#icon-shift" /></svg>3 смена</button>
+                        <button data-shift="1" class="shift-btn active"><svg aria-hidden="true" width="24" height="24"><use href="#icon-shift" /></svg>1 смена</button>
+                        <button data-shift="2" class="shift-btn"><svg aria-hidden="true" width="24" height="24"><use href="#icon-shift" /></svg>2 смена</button>
+                        <button data-shift="3" class="shift-btn"><svg aria-hidden="true" width="24" height="24"><use href="#icon-shift" /></svg>3 смена</button>
                     </div>
 
-                    <div class="schedule-cards first-shift">
+                    <div data-shift="1" class="schedule-cards first-shift">
                         <div class="schedule-card__item">
                             <h3>Понедельник</h3>
                             <ul>
@@ -142,6 +142,112 @@
                         </div>
                         <div class="schedule-card__item">
                             <h3>Суббота</h3>
+                            <ul>
+                                <li>10:00 — Прогулка по городу</li>
+                                <li>12:00 — Wrap‑up party</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div data-shift="2" hidden class="schedule-cards first-shift">
+                        <div class="schedule-card__item">
+                            <h3>Понедельник (2 смена)</h3>
+                            <ul>
+                                <li>09:00 — Welcome & приветствие ректора</li>
+                                <li>10:30 — Тур по кампусу (3 корпуса)</li>
+                                <li>12:00 — Обед</li>
+                                <li>14:00 — IT‑настройки</li>
+                            </ul>
+                        </div>
+                        <div class="schedule-card__item">
+                            <h3>Вторник (2 смена)</h3>
+                            <ul>
+                                <li>09:00 — Брифинг по безопасности</li>
+                                <li>10:30 — Встреча с деканом</li>
+                                <li>12:00 — Ярмарка клубов</li>
+                                <li>15:00 — Спортивное время</li>
+                            </ul>
+                        </div>
+                        <div class="schedule-card__item">
+                            <h3>Среда (2 смена)</h3>
+                            <ul>
+                                <li>09:00 — Брифинг по безопасности</li>
+                                <li>10:30 — Встреча с деканом</li>
+                                <li>12:00 — Ярмарка клубов</li>
+                                <li>15:00 — Спортивное время</li>
+                            </ul>
+                        </div>
+                        <div class="schedule-card__item">
+                            <h3>Четверг (2 смена)</h3>
+                            <ul>
+                                <li>09:30 — Презентация Career Center</li>
+                                <li>11:00 — Финансы/Бурсар: оплаты и гранты</li>
+                                <li>14:00 — Презентация Student Union (SYU)</li>
+                            </ul>
+                        </div>
+                        <div class="schedule-card__item">
+                            <h3>Пятница (2 смена)</h3>
+                            <ul>
+                                <li>10:00 — Квест‑викторина по кампусу</li>
+                                <li>12:00 — Гифты и мерч</li>
+                                <li>17:00 — Мини‑концерт/митап</li>
+                            </ul>
+                        </div>
+                        <div class="schedule-card__item">
+                            <h3>Суббота (2 смена)</h3>
+                            <ul>
+                                <li>10:00 — Прогулка по городу</li>
+                                <li>12:00 — Wrap‑up party</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div data-shift="3" hidden class="schedule-cards first-shift">
+                        <div class="schedule-card__item">
+                            <h3>Понедельник (3 смена)</h3>
+                            <ul>
+                                <li>09:00 — Welcome & приветствие ректора</li>
+                                <li>10:30 — Тур по кампусу (3 корпуса)</li>
+                                <li>12:00 — Обед</li>
+                                <li>14:00 — IT‑настройки</li>
+                            </ul>
+                        </div>
+                        <div class="schedule-card__item">
+                            <h3>Вторник (3 смена)</h3>
+                            <ul>
+                                <li>09:00 — Брифинг по безопасности</li>
+                                <li>10:30 — Встреча с деканом</li>
+                                <li>12:00 — Ярмарка клубов</li>
+                                <li>15:00 — Спортивное время</li>
+                            </ul>
+                        </div>
+                        <div class="schedule-card__item">
+                            <h3>Среда (3 смена)</h3>
+                            <ul>
+                                <li>09:00 — Брифинг по безопасности</li>
+                                <li>10:30 — Встреча с деканом</li>
+                                <li>12:00 — Ярмарка клубов</li>
+                                <li>15:00 — Спортивное время</li>
+                            </ul>
+                        </div>
+                        <div class="schedule-card__item">
+                            <h3>Четверг (3 смена)</h3>
+                            <ul>
+                                <li>09:30 — Презентация Career Center</li>
+                                <li>11:00 — Финансы/Бурсар: оплаты и гранты</li>
+                                <li>14:00 — Презентация Student Union (SYU)</li>
+                            </ul>
+                        </div>
+                        <div class="schedule-card__item">
+                            <h3>Пятница (3 смена)</h3>
+                            <ul>
+                                <li>10:00 — Квест‑викторина по кампусу</li>
+                                <li>12:00 — Гифты и мерч</li>
+                                <li>17:00 — Мини‑концерт/митап</li>
+                            </ul>
+                        </div>
+                        <div class="schedule-card__item">
+                            <h3>Суббота (3 смена)</h3>
                             <ul>
                                 <li>10:00 — Прогулка по городу</li>
                                 <li>12:00 — Wrap‑up party</li>
