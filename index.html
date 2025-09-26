@@ -11,32 +11,47 @@
     <title>ISFT Freshers</title>
 </head>
 <body>
-    <main class="main">
-            <header>
-                <div class="container">
-                    <div class="header-row--desktop">
-                        <div class="header__left">
-                            <a href="#!">ISFT</a>
-                        </div>
-                        <div class="header__right">
-                            <a href="#schedule" class="header-right__item">Расписание</a>
-                            <a href="#tour" class="header-right__item">Короткий тур</a>
-                            <a href="#familiarity" class="header-right__item">Кто есть кто</a>
-                            <a href="#volunteer" class="header-right__item">Волонтерство и клубы</a>
-                            <a href="#!" class="header-right__btn"><svg aria-hidden="true" width="24" height="24"><use href="#icon-call" /></svg></a>
-                            <a href="#!" class="header-right__btn"><svg aria-hidden="true" width="24" height="24"><use href="#icon-language" /></svg></a>
-                        </div>
+    <header>
+        <div class="container">
+            <div class="header-row--desktop">
+                <div class="header__left">
+                    <a href="#!">ISFT</a>
+                </div>
+                <div class="header__right">
+                    <a href="#schedule" class="header-right__item">Расписание</a>
+                    <a href="#tour" class="header-right__item">Короткий тур</a>
+                    <a href="#familiarity" class="header-right__item">Кто есть кто</a>
+                    <a href="#volunteer" class="header-right__item">Волонтерство и клубы</a>
+                    <a href="#!" class="header-right__btn"><svg aria-hidden="true" width="24" height="24"><use href="#icon-call" /></svg></a>
+                    <a href="#!" class="header-right__btn"><svg aria-hidden="true" width="24" height="24"><use href="#icon-language" /></svg></a>
+                </div>
+            </div>
+            <div class="header-row--mobile">
+                <div class="header-row--mobile-top">
+                    <div class="header__left--mobile">
+                        <a href="#!">ISFT</a>
                     </div>
-                    <div class="header-row--mobile">
-                        <div class="header__left--mobile">
-                            <a href="#!">ISFT</a>
-                        </div>
-                        <div class="header__right--mobile">
-                            <a><svg aria-hidden="true" width="24" height="24"><use href="#icon-burger"/></svg></a>
-                        </div>
+                    <div class="header__right--mobile">
+                        <button id="open-mobile-menu"><svg aria-hidden="true" width="24" height="24"><use href="#icon-burger"/></svg></button>
                     </div>
                 </div>
-            </header>
+                <div class="header-row--mobile-bottom">
+                    <div id="mobile-menu" class="header-mobile__bottom">
+                        <section class="header-mobile__section">
+                            <a class="menu-element" href="tel:+998 97 130 09 09">+998 97 130 09 09</a>
+                            <a class="menu-element">UZ версия</a>
+                            <a href="#schedule" class="menu-element">Расписание</a>
+                            <a href="#tour" class="menu-element">Короткий тур</a>
+                            <a href="#familiarity" class="menu-element">Кто есть кто</a>
+                            <a href="#volunteer" class="menu-element">Волонтерство и клубы</a>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-page" class="main">
             <section class="first-screen">
                 <div class="container">
                     <div class="first-screen__row">
