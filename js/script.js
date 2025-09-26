@@ -121,3 +121,38 @@ const attachHScroll = (el) => {
 
 // навешиваем на все списки staff
 $$('.staff').forEach(attachHScroll);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const schedule = document.querySelector('.schedule');
+  if (!schedule) return;
+
+  const btns  = schedule.querySelectorAll('.shift-btn');
+  const panes = schedule.querySelectorAll('.schedule-cards');
+
+  // восстановим выбранную смену (если есть)
+  const saved = localStorage.getItem('introWeekShift');
+  const initialShift = saved || (btns[0]?.dataset.shift ?? '1');
+  showShift(initialShift);
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => showShift(btn.dataset.shift));
+  });
+
+  function showShift(shiftId) {
+    // кнопки
+    btns.forEach(b => {
+      const active = b.dataset.shift === shiftId;
+      b.classList.toggle('active', active);
+      b.setAttribute('aria-pressed', String(active));
+    });
+
+    // панели
+    panes.forEach(p => {
+      const show = p.dataset.shift === shiftId;
+      p.hidden = !show;
+      p.setAttribute('aria-hidden', String(!show));
+    });
+
+    localStorage.setItem('introWeekShift', shiftId);
+  }
+});
